@@ -23,4 +23,5 @@ On left pane under Drill down, you will see them
 The traces might not be obvious, you can get the list of the IDs and search on the Trace panel
 kubectl port-forward -n observability svc/tempo 3200:3200
 Run this on another terminal to get the list of Trace Ids
-'''curl -s "http://localhost:3200/api/search?limit=10" | jq -r '.traces[] | .traceID' '''
+
+curl -s "http://localhost:3200/api/search?limit=10" | jq -r '.traces[] | .traceID'
